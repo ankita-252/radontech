@@ -1,0 +1,25 @@
+.navbar{
+  position: fixed;
+  right: 0;
+  background: aqua;
+  padding: 16px;
+}
+a{
+  margin: 0px 16px
+}
+.view{
+height:100vh;
+overflow: scroll;
+/* padding: 32px; */
+/* margin:10% 5%; */
+}
+.view-header{
+  color:blue;
+  font-size: 48px;
+}
+.view::-webkit-scrollbar{
+  display: none;
+}
+.wrapper{
+height: 100%;
+}
