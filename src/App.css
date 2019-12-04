@@ -1,12 +1,24 @@
 .navbar{
   position: fixed;
-  right: 0;
-  background: aqua;
+  background: black;
+  opacity: 0.5;
   padding: 16px;
+  z-index: 2;
+  display: flex;
+    width: 100%;
+    padding: 24px 0;
+    justify-content: center;
 }
 a{
-  margin: 0px 16px
+  margin: 0px 16px;
+  text-decoration: none;
+  color: white;
+
 }
+a:hover{
+  color:rgba(136,106,234,0.8);
+}
+
 .view{
 height:100vh;
 overflow: scroll;
@@ -17,9 +29,229 @@ overflow: scroll;
   color:blue;
   font-size: 48px;
 }
-.view::-webkit-scrollbar{
-  display: none;
-}
+
 .wrapper{
 height: 100%;
 }
+
+.page-cover{
+  background-image: url('./assets/bgcover.jpg');
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.home-header{
+  display: block;
+  color:white;
+  font-size: 5rem;
+  text-align: center;
+  margin: 32px 0;
+}
+.home-header.anim-1{
+  animation: fade-in-move-down 0.7s ease forwards;
+  padding: 32px 0;
+}
+.main-container{
+  background: linear-gradient(to bottom,rgba(142,89,204,0.8) 10%,rgba(136,106,234,0.8) 53%,rgba(54,40,158,0.85) 100%);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  opacity: 0.85;
+}
+.home-header::before{
+  content: '';
+  display: block;
+  background: #fff;
+  width: 55%;
+  height: 3px;
+  margin: 40px auto 5px;
+}
+.home-header::after
+{
+  content: '';
+  display: block;
+  background: #fff;
+  width: 55%;
+  height: 3px;
+  margin: 5px auto 0;
+}
+.swiper-container{
+  position: absolute;
+  width: 100%;
+  height:100%;
+overflow: scroll;
+scroll-behavior: smooth;
+
+}
+
+.swiper-container::-webkit-scrollbar{
+  display: none;
+}
+
+.home-sub-header{
+  color:white;
+  font-size: 24px;
+  width: 65%;
+  margin: auto;
+  text-align: center;
+}
+.home-sub-header.anim-2{
+ 
+  animation: fade-in-move-up 1s ease forwards;
+
+}
+
+.swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.home-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.slide-container.anim-2{
+  animation: fade-in-move-up 1s ease;
+}
+
+.center-vh{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-slide{
+  color:white;
+}
+.about-header{
+  line-height: 1.1;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+    max-width: 512px;
+    margin: auto;
+}
+.about-sub-section{
+  display: flex;
+  padding-top: 16px;
+  max-width: 800px;
+  width: 80%;
+  margin: auto;
+}
+
+.about-sub-section .right-col{
+  border-left: 2px solid;
+  padding: 0 16px;
+  opacity: 0.8;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.about-sub-section .right-col .right-col-text.anim-2{
+  animation: fade-in-move-up 1s ease;
+}
+.about-sub-section .left-col{
+  font-weight: 300;
+  line-height: 1.1;
+  font-size: 3rem;
+  padding: 0 16px;
+}
+.about-sub-section .left-col.anim-3{
+  animation: fade-in-move-up-2 1s ease;
+}
+.services-container{
+  color:white;
+}
+.services-header{
+font-size:3em;
+text-align: center;
+padding: 16px 0;
+}
+.services-subheader{
+  font-size:1.4em;
+  text-align: center;
+}
+.services-description{
+  display: flex;
+    justify-content: center;
+    width: 64%;
+    margin: auto;
+    padding: 24px;
+}
+.services-description.anim{
+  animation: fade-in-move-down 1s ease forwards;
+  padding: 16px;
+
+}
+.description-container{
+  display: flex;
+  flex-direction: column;
+  padding:0 64px;
+}
+.description-wrapper{
+  padding: 16px 0;
+  flex-grow:1;
+  flex-basis: 0;
+  flex-basis: 0;
+ 
+}
+.header-container.anim-3{
+  animation: fade-in-move-up 2s ease;
+}
+.description-header{
+  font-size: 28px;
+  padding-bottom: 8px;
+}
+.description-subheader{
+  opacity: 0.9;
+  font-size: 18px;
+}
+
+
+@keyframes fade-in-move-down {
+  0% {
+    opacity: 0;
+    transform: none;
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+  
+  }
+  
+  @keyframes fade-in-move-up {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  
+  100% {
+    opacity: 1;
+    transform: none;
+    
+  }
+  }
+  
+  @keyframes fade-in-move-up-2 {
+    0% {
+      opacity: 0;
+      transform: translateY(.5rem);
+    }
+    
+    100% {
+      opacity: 1;
+      transform: none;
+      
+    }
+    }
+
+
